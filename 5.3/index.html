@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		 <link rel="stylesheet" type="text/css" href="styles.css">
+	  <script type="text/javascript">
+		var result;
+		var str;
+		var x;
+		function onnumber(nums){
+			str=document.getElementById("shujukuang");
+			str.value=str.value+nums;
+		}
+		function onclear(){
+			str=document.getElementById("shujukuang");
+			str.value="";
+		}
+		function onresult(){
+			str=document.getElementById("shujukuang");
+			result = eval(str.value);
+            str.value = result; 
+		}
+		function dishu(){
+			str=document.getElementById("shujukuang");
+			x=str.value;
+			str.value="";
+			return (x);
+		}
+		function cfjg(){
+			str=document.getElementById("shujukuang");
+			var y;
+			y=str;
+			result=Math.pow(x,y.value)
+			str.value=result;
+		}
+		function eduishu(){
+			str=document.getElementById("shujukuang");
+			var y;
+			y=str.value;
+			result=Math.log(y);
+			str.value=result;
+		}
+		function _2duishu(){
+			str=document.getElementById("shujukuang");
+			var y;
+			y=str.value;
+			result=Math.log(y)/Math.log(2);
+			str.value=result;
+		}
+		function _10duishu(){
+			str=document.getElementById("shujukuang");
+			var y;
+			y=str.value;
+			result=Math.log(y)/Math.log(10);
+			str.value=result;
+		}
+		function _sin(){
+			str=document.getElementById("shujukuang");
+			var y;
+			y=str.value;
+			result=Math.sin(y);
+			str.value=result;
+		}
+		function _cos(){
+			str=document.getElementById("shujukuang");
+			var y;
+			y=str.value;
+			result=Math.cos(y);
+			str.value=result;
+		}
+		
+	  </script>
+	</head>
+	<body style="background-image: url(img/bg4.jpeg);">
+		<div align="center" style="font-size: 60px;">
+			<br/> Calculator<br/><br/>
+		</div>
+		<table align="center"  style="width: 530px;height: 420px;background-color=grey border="1" bordercolor="orange"">
+			<tr>
+				<td colspan="5">
+					<input type="text" id="shujukuang" style="width: 520px;height: 45px;font-size: 43px;background-image: url(img/25.png);" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="1">
+					<input type="button" id="1" value="1" onclick="onnumber(1)"style="width: 100px;height: 60px;background-image: url(img/1.png);font-size: 35px;;" />
+				</td>
+				<td colspan="1">
+					<input type="button" id="2" value="2" onclick="onnumber(2)"style="width: 100px;height: 60px;background-image: url(img/21.png);font-size: 35px;" />
+				</td>
+				<td colspan="1">
+					<input type="button" id="3" value="3" onclick="onnumber(3)"style="width: 100px;height: 60px;background-image: url(img/23.png);font-size: 35px;" />
+				</td>
+				<td colspan="1">
+					<input type="button" id="sum" value="+" onclick="onnumber('+')"style="width: 100px;height: 60px;background-image: url(img/11.png);font-size: 35px;" />
+				</td>
+				<td colspan="1">
+					<input type="button" id="clear" value="归零" onclick="onclear()"style="width: 100px;height: 60px;background-image: url(img/6.png);font-size: 35px;" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="1">
+					<input type="button" id="4" value="4" onclick="onnumber(4)"style="width: 100px;height: 60px;background-image: url(img/14.png);font-size: 35px;" />
+				</td>
+				<td colspan="1">
+					<input type="button" id="5" value="5" onclick="onnumber(5)"style="width: 100px;height: 60px;background-image: url(img/22.png);font-size: 35px;" />
+				</td>
+				<td colspan="1">
+					<input type="button" id="6" value="6" onclick="onnumber(6)"style="width: 100px;height: 60px;background-image: url(img/4.png);font-size: 35px;" />
+				</td>
+				<td colspan="1">
+					<input type="button" id="sub" value="-" onclick="onnumber('-')"style="width: 100px;height: 60px;background-image: url(img/27.png);font-size: 35px;" />
+				</td>
+				<td colspan="1">
+					<input type="button" id="cifang" value="^" onclick="dishu()"style="width: 100px;height: 60px;background-image: url(img/10.png);font-size: 35px;" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="1">
+					<input type="button" id="7" value="7" onclick="onnumber(7)"style="width: 100px;height: 60px;background-image: url(img/17.png);font-size: 35px;" />
+				</td>
+				<td colspan="1">
+					<input type="button" id="8" value="8" onclick="onnumber(8)"style="width: 100px;height: 60px;background-image: url(img/24.png);font-size: 35px;" />
+				</td>
+				<td colspan="1">
+					<input type="button" id="9" value="9" onclick="onnumber(9)"style="width: 100px;height: 60px;background-image: url(img/28.png);font-size: 35px;" />
+				</td>
+				<td colspan="1">
+					<input type="button" id="mul" value="*" onclick="onnumber('*')"style="width: 100px;height: 60px;background-image: url(img/28.png);font-size: 35px;" />
+				</td>
+				<td colspan="1">
+					<input type="button" id="cifangjieguo" value="乘方结果" onclick="cfjg()"style="width: 100px;height: 60px;background-image: url(img/8.png);font-size: 20px;" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="button" id="0" value="0" onclick="onnumber(0)"style="width: 208px;height: 60px;background-image: url(img/7.png);font-size: 35px;" />
+				</td>
+				<td colspan="1">
+					<input type="button" id="dian" value="." onclick="onnumber('.')"style="width: 100px;height: 60px;background-image: url(img/12.png);font-size: 35px;" />
+				</td>
+				<td colspan="1">
+					<input type="button" id="divi" value="/" onclick="onnumber('/')"style="width: 100px;height: 60px;background-image: url(img/30.png);font-size: 35px;" />
+				</td>
+				<td colspan="1">
+					<input type="button" id="result" value="=" onclick="onresult()"style="width: 100px;height: 60px;background-image: url(img/8.png);font-size: 35px;" />
+				</td>
+		    </tr>
+		    <tr>
+				<td colspan="1">
+					<input type="button" id="loge" value="log.e" onclick="eduishu()"style="width: 100px;height: 60px;background-image: url(img/13.png);font-size: 35px;" />
+				</td>
+				<td colspan="1">
+					<input type="button" id="log2" value="log.2" onclick="_2duishu()"style="width: 100px;height: 60px;background-image: url(img/28.png);font-size: 35px;" />
+				</td>
+				<td colspan="1">
+					<input type="button" id="log10" value="log.10" onclick="_10duishu()"style="width: 100px;height: 60px;background-image: url(img/29s.png);font-size: 35px;" />
+				</td>
+				<td colspan="1">
+					<input type="button" id="sin" value="sin(x)" onclick="_sin()"style="width: 100px;height: 60px;background-image: url(img/29s.png)font-size: 35px;" />
+				</td>
+								<td colspan="1">
+					<input type="button" id="cos" value="cos(x)" onclick="_cos()"style="width: 100px;height: 60px;background-image: url(img/12.png)font-size: 35px;" />
+				</td>
+		    </tr>		
+		</table>	
+	</body>
+</html>
+
